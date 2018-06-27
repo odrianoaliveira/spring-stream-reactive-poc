@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: subscriber
+          binder: rabbit
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
