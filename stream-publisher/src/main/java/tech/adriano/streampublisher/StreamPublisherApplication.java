@@ -19,7 +19,7 @@ public class StreamPublisherApplication {
     @StreamEmitter
     @Output(Source.OUTPUT)
     public Flux<String> emit() {
-        return Flux.interval(Duration.ofSeconds(1))
+        return Flux.interval(Duration.ofMillis(500))
                 .map(l -> "Hello " + l);
     }
 

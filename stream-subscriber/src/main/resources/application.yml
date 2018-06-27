@@ -6,6 +6,8 @@ spring:
           destination: subscriber
           group: group
           binder: rabbit
+          consumer:
+            concurrency: 8
       binders:
         rabbit:
           type: rabbit
